@@ -7,10 +7,10 @@
 site_name: Open Company Research
 site_description: 全球最完整的中文《上市公司研究》知识库——一套教你如何系统化研究公司的开源教材。
 site_author: Open Company Research Contributors
-site_url: https://OWNER.github.io/open-company-research/
+site_url: https://leenpong.github.io/open-company-research/
 
 repo_name: open-company-research
-repo_url: https://github.com/OWNER/open-company-research
+repo_url: https://github.com/leenpong/open-company-research
 edit_uri: edit/main/docs/
 
 copyright: >
@@ -142,7 +142,7 @@ extra_javascript:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/OWNER/open-company-research
+      link: https://github.com/leenpong/open-company-research
   generator: false
 
 # -------------------------------- 导航 ---------------------------------------
