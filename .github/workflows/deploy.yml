@@ -1,0 +1,67 @@
+# -----------------------------------------------------------------------------
+# Deploy to GitHub Pages
+#
+# ⚠️ 该工作流当前处于「禁用」状态（先注释）。
+#
+# 待项目 v1.0 首个完整版本就绪后再启用：
+#   1. 在仓库 Settings → Pages 中将 Source 设为 "GitHub Actions"。
+#   2. 删除下方每行开头的 "# "，取消注释整个工作流。
+#   3. 确认 permissions 与 concurrency 配置无误后推送。
+# -----------------------------------------------------------------------------
+
+# name: Deploy GitHub Pages
+#
+# on:
+#   push:
+#     branches: [main]
+#   workflow_dispatch:
+#
+# permissions:
+#   contents: read
+#   pages: write
+#   id-token: write
+#
+# concurrency:
+#   group: pages
+#   cancel-in-progress: false
+#
+# jobs:
+#   build:
+#     name: Build site
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0
+#
+#       - name: Set up Python
+#         uses: actions/setup-python@v5
+#         with:
+#           python-version: "3.12"
+#           cache: pip
+#
+#       - name: Install dependencies
+#         run: |
+#           python -m pip install --upgrade pip
+#           pip install -r requirements.txt
+#
+#       - name: Build site
+#         run: mkdocs build --strict
+#
+#       - name: Upload Pages artifact
+#         uses: actions/upload-pages-artifact@v3
+#         with:
+#           path: site
+#
+#   deploy:
+#     name: Deploy to GitHub Pages
+#     needs: build
+#     runs-on: ubuntu-latest
+#     environment:
+#       name: github-pages
+#       url: ${{ steps.deployment.outputs.page_url }}
+#     steps:
+#       - name: Deploy
+#         id: deployment
+#         uses: actions/deploy-pages@v4

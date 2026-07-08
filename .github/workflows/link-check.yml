@@ -1,0 +1,31 @@
+name: Link Checker
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # 每周一 03:00 UTC 定期巡检失效链接
+    - cron: "0 3 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  linkcheck:
+    name: Check for broken links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run lychee link checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --accept 200,204,206,429
+            --exclude-mail
+            --exclude "^https://github.com/OWNER/"
+            "**/*.md"
+          fail: false

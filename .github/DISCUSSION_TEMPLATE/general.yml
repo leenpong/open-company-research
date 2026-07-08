@@ -1,0 +1,21 @@
+title: "[Discussion] "
+body:
+  - type: textarea
+    id: topic
+    attributes:
+      label: 讨论主题
+      description: 你想和社区讨论什么？可以是方法论、选题、结构建议等。
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 背景与思考
+      description: 提供背景、你的观点或已有的资料链接。
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认
+      options:
+        - label: 讨论内容中立、友善，遵循社区行为准则。
+          required: true

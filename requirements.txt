@@ -1,0 +1,22 @@
+# ---------------------------------------------------------------------------
+# Open Company Research — documentation build dependencies
+# Install:  pip install -r requirements.txt
+# ---------------------------------------------------------------------------
+
+# Core static-site generator
+mkdocs>=1.6,<2.0
+
+# Material for MkDocs theme (Mermaid, dark mode, search, nav features)
+mkdocs-material>=9.5,<10.0
+
+# Auto-generate navigation from the docs/ tree (uses .pages files)
+mkdocs-awesome-pages-plugin>=2.9,<3.0
+
+# Show the last Git revision/creation date on each page
+mkdocs-git-revision-date-localized-plugin>=1.2,<2.0
+
+# Minify HTML/CSS/JS output for production builds
+mkdocs-minify-plugin>=0.8,<1.0
+
+# Emoji and additional Markdown extensions (pulled in by Material, pinned here)
+pymdown-extensions>=10.7,<11.0

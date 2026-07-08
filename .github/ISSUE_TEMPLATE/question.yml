@@ -1,0 +1,30 @@
+name: ❓ 提问
+description: 就使用或内容提出疑问（更适合放到 Discussions）
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提示：开放式讨论更推荐使用
+        [Discussions](https://github.com/OWNER/open-company-research/discussions)。
+        如果确为具体问题，请在此提问。
+  - type: textarea
+    id: question
+    attributes:
+      label: 你的问题
+      description: 尽量清晰具体地描述你的疑问。
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 背景信息
+      description: 相关页面、已尝试的方法等。
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认
+      options:
+        - label: 我已阅读 README 与相关文档仍未解决。
+          required: true

@@ -1,0 +1,150 @@
+# -----------------------------------------------------------------------------
+# Open Company Research — MkDocs configuration
+# Docs:  https://squidfunk.github.io/mkdocs-material/
+# Serve: mkdocs serve   |   Build: mkdocs build
+# -----------------------------------------------------------------------------
+
+site_name: Open Company Research
+site_description: 全球最完整的中文《上市公司研究》知识库——一套教你如何系统化研究公司的开源教材。
+site_author: Open Company Research Contributors
+site_url: https://OWNER.github.io/open-company-research/
+
+repo_name: open-company-research
+repo_url: https://github.com/OWNER/open-company-research
+edit_uri: edit/main/docs/
+
+copyright: >
+  Copyright &copy; 2026 Open Company Research Contributors ·
+  内容采用 CC BY 4.0 授权 · 仅用于教育与研究，不构成投资建议。
+
+docs_dir: docs
+
+# ------------------------------- Theme ---------------------------------------
+theme:
+  name: material
+  language: zh
+  custom_dir: docs/overrides
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    # 跟随系统
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: 切换到浅色模式
+    # 浅色
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    # 深色（Dark Mode）
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 跟随系统
+  features:
+    # Navigation
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    # Search
+    - search.suggest
+    - search.highlight
+    - search.share
+    # Content
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+    - content.action.view
+
+# ------------------------------ Plugins --------------------------------------
+plugins:
+  # 站内搜索（支持中文分词）
+  - search:
+      lang:
+        - zh
+        - en
+  # 从目录树自动生成导航（配合各目录 .pages 文件）
+  - awesome-pages
+  # 显示页面的 Git 创建 / 更新日期
+  - git-revision-date-localized:
+      type: date
+      timezone: Asia/Shanghai
+      locale: zh
+      fallback_to_build_date: true
+      enable_creation_date: true
+      enable_git_follow: false
+
+# --------------------------- Markdown 扩展 -----------------------------------
+markdown_extensions:
+  # 基础增强
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  # PyMdown Extensions
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  # MathJax 支持
+  - pymdownx.arithmatex:
+      generic: true
+  # Mermaid 图表支持（Material 内置渲染）
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+# ------------------------- 额外脚本与样式 ------------------------------------
+extra_javascript:
+  # MathJax
+  - assets/javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/OWNER/open-company-research
+  generator: false
+
+# -------------------------------- 导航 ---------------------------------------
+# 导航由 awesome-pages 插件依据 docs/ 目录结构自动生成。
+# 如需手动调整顺序，请在对应目录下创建 .pages 文件。

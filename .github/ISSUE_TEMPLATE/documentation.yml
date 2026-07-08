@@ -1,0 +1,43 @@
+name: 📝 文档 / 内容问题
+description: 报告内容错误、缺失、过时或提出撰写请求
+title: "[Docs]: "
+labels: ["documentation", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        用于报告内容层面的问题（数据错误、表述不清、章节缺失等）。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 问题类型
+      options:
+        - 内容错误 / 数据有误
+        - 表述不清 / 需要改进
+        - 内容缺失 / 希望新增
+        - 内容过时 / 需要更新
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: 相关页面 / 文件
+      placeholder: docs/01-fundamentals/README.md
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 详细说明
+      description: 具体是什么问题？如涉及数据错误，请附上正确来源。
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认
+      options:
+        - label: 内容中立、可验证，不含投资建议或荐股。
+          required: true
+        - label: 我已搜索过现有 Issue，确认没有重复。
+          required: true

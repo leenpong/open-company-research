@@ -1,0 +1,4 @@
+# Material theme overrides
+
+此目录用于存放 Material for MkDocs 的模板覆盖文件（`custom_dir`）。
+当前为空占位，后续可在此自定义 `main.html`、页脚、公告条等。

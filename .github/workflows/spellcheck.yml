@@ -1,0 +1,31 @@
+name: Spell Check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.md"
+      - ".github/workflows/spellcheck.yml"
+  pull_request:
+    paths:
+      - "**/*.md"
+      - ".github/workflows/spellcheck.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  codespell:
+    name: Check spelling
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run codespell
+        uses: codespell-project/actions-codespell@v2
+        with:
+          skip: "*.min.*,./assets/**,./site/**,./.git/**"
+          ignore_words_list: "ba,nd,te"
+          check_filenames: true
+          check_hidden: false
