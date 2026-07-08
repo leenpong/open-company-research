@@ -4,13 +4,13 @@
 
 **全球最完整的中文《上市公司研究》知识库**
 
-_一套教你如何系统化研究一家公司的开源教材_
+*一套教你如何系统化研究一家公司的开源教材*
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](./LICENSE)
 [![Docs: MkDocs Material](https://img.shields.io/badge/docs-MkDocs%20Material-blue.svg)](https://squidfunk.github.io/mkdocs-material/)
 [![Markdown Lint](https://img.shields.io/badge/style-markdownlint-brightgreen.svg)](./.markdownlint.json)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
-[![Made with ❤ in Chinese](https://img.shields.io/badge/language-中文-red.svg)](#)
+![Made with ❤ in Chinese](https://img.shields.io/badge/language-中文-red.svg)
 
 [介绍](#-项目介绍) ·
 [特点](#-特点) ·
@@ -33,7 +33,7 @@ _一套教你如何系统化研究一家公司的开源教材_
 本项目 **不是** 股票推荐，**不是** 财经新闻，**不是** 投资课程。
 它是一套关于「公司研究方法论」的系统化教材——从财务报表、商业模式、行业格局，到竞争壁垒、管理层分析与估值框架，帮助读者建立独立、结构化的研究能力。
 
-> ⚠️ **免责声明**：本知识库仅用于教育与研究目的，不构成任何投资建议。所有内容不代表任何买卖推荐，读者需为自己的决策负责。
+> ⚠ **免责声明**：本知识库仅用于教育与研究目的，不构成任何投资建议。所有内容不代表任何买卖推荐，读者需为自己的决策负责。
 
 ## 🎯 目标
 
@@ -46,12 +46,12 @@ _一套教你如何系统化研究一家公司的开源教材_
 
 - 📚 **系统化**：以方法论为主线，而非零散知识点。
 - 🧩 **模板化**：公司、行业、财报、纪要均有标准模板。
-- 🗺️ **结构化**：清晰的目录分层，便于检索与导航。
+- 🗺 **结构化**：清晰的目录分层，便于检索与导航。
 - 🎨 **可视化**：Mermaid 图表、思维导图、时间线全面支持。
 - 🌐 **在线化**：基于 MkDocs Material 一键生成文档站点。
 - 🤝 **开放化**：CC BY 4.0 协议，欢迎社区共建。
 
-## 🗂️ 项目结构
+## 🗂 项目结构
 
 ```text
 .
@@ -100,7 +100,7 @@ _一套教你如何系统化研究一家公司的开源教材_
 └── .github/                   Issue / PR 模板与 CI 工作流
 ```
 
-## 🛣️ Roadmap
+## 🛣 Roadmap
 
 项目按语义化版本分阶段推进，完整规划见 [ROADMAP.md](./ROADMAP.md)。
 
@@ -165,6 +165,7 @@ pip install -r requirements.txt
 mkdocs serve
 # 浏览器打开 http://127.0.0.1:8000
 ```
+
 </details>
 
 <details>
