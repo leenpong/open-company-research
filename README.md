@@ -63,6 +63,8 @@ _一套教你如何系统化研究一家公司的开源教材_
 ├── SECURITY.md                安全策略
 ├── ROADMAP.md                 路线图
 ├── STYLE_GUIDE.md             写作与格式规范
+├── EDITORIAL_GUIDE.md         内容写作标准
+├── PROJECT_RULES.md           工程 / 内容协作规则
 ├── mkdocs.yml                 MkDocs 站点配置
 ├── requirements.txt           文档构建依赖
 │
@@ -74,9 +76,12 @@ _一套教你如何系统化研究一家公司的开源教材_
 │   ├── 03-semiconductor/      半导体行业专题
 │   ├── 04-cloud/              云计算行业专题
 │   ├── 05-case-study/         实战案例研究
-│   ├── 06-template/           研究模板说明
-│   ├── 07-books/              书单与读书笔记
+│   ├── 06-templates/          研究模板说明
+│   ├── 07-learning/           学习资源（Books/Courses/Videos/Papers）
 │   ├── 08-resources/          外部资源与工具
+│   ├── 09-companies/          公司研究（按公司归档）
+│   ├── 10-industry-maps/      产业链地图
+│   ├── 11-notes/              研究笔记（按年份归档）
 │   ├── glossary/              术语表
 │   └── appendix/              附录
 │
@@ -91,6 +96,7 @@ _一套教你如何系统化研究一家公司的开源教材_
 ├── scripts/                   构建与维护脚本
 ├── examples/                  示例产出
 ├── resources/                 原始素材与参考资料
+├── .claude/                   Claude Code 工程协作说明
 └── .github/                   Issue / PR 模板与 CI 工作流
 ```
 
@@ -118,6 +124,8 @@ _一套教你如何系统化研究一家公司的开源教材_
 
 - [CONTRIBUTING.md](./CONTRIBUTING.md) — 如何提交贡献
 - [STYLE_GUIDE.md](./STYLE_GUIDE.md) — 写作与格式规范
+- [EDITORIAL_GUIDE.md](./EDITORIAL_GUIDE.md) — 内容写作标准
+- [PROJECT_RULES.md](./PROJECT_RULES.md) — 工程 / 内容协作规则
 - [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) — 社区行为准则
 
 ## 📄 License
